@@ -1,6 +1,6 @@
 <script setup>
-import Navbar from "../components/Navbar.vue";
-import Header from "../components/Header.vue";
+
+import Navbar from "../components/Navbar2.vue";
 import AddTodo from "../components/AddTodo.vue";
 </script>
 

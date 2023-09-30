@@ -52,11 +52,17 @@ onMounted(() => {
 </script>
 
 <template>
+  <section class="navbar">
+    <div>
+      
+    </div>
+  </section>
+
   <section class="create-todo">
-    <h3>CREATE A TODO</h3>
+    <h3>CREATE A TO DO LIST</h3>
 
     <form id="new-todo-form" @submit.prevent="addTodo">
-      <h4>What's on your todo list?</h4>
+      <h4>What do you want to add to your todo list?</h4>
       <input
         type="text"
         name="content"
@@ -90,11 +96,37 @@ onMounted(() => {
           <span class="bubble personal"></span>
           <div>Personal</div>
         </label>
+
+        <label>
+          <input
+            type="radio"
+            name="category"
+            id="category3"
+            value="school"
+            v-model="input_category"
+          />
+          <span class="bubble school"></span>
+          <div>School</div>
+        </label>
+
+        <label>
+          <input
+            type="radio"
+            name="category"
+            id="category4"
+            value="groceries"
+            v-model="input_category"
+          />
+          <span class="bubble groceries"></span>
+          <div>Groceries</div>
+        </label>
+
       </div>
 
       <input type="submit" value="Add todo" />
     </form>
   </section>
+
   <section class="todo-list">
     <h3>TODO LIST</h3>
     <div class="list" id="todo-list">
