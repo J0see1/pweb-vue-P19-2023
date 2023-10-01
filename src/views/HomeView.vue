@@ -1,12 +1,12 @@
 <script setup>
-
-import Navbar from "../components/Navbar2.vue";
+import Navbar from "../components/Navbar.vue";
 import AddTodo from "../components/AddTodo.vue";
+import Header from "../components/Header.vue";
 </script>
 
 <template>
   <main>
-    <!-- <Navbar /> -->
+    <Navbar />
     <Header />
     <AddTodo />
   </main>
