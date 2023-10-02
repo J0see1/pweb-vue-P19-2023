@@ -85,7 +85,15 @@
           <input type="checkbox" v-model="todo.done" />
           <span
             :class="`bubble ${
-              todo.category == 'business' ? 'business' : 'personal'
+              todo.category == 'business'
+                ? 'business'
+                : todo.category == 'personal'
+                ? 'personal'
+                : todo.category == 'school'
+                ? 'school'
+                : todo.category == 'groceries'
+                ? 'groceries'
+                : ''
             }`"
           ></span>
         </label>
