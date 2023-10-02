@@ -18,6 +18,6 @@ onMounted(() => {
       What's up,
       <input type="text" id="name" placeholder="Name here" v-model="name" />
     </h2>
-    <h3>How's your week? care to plan the next one?</h3>
+    <h3>How's your week? Care to plan the next one?</h3>
   </section>
 </template>

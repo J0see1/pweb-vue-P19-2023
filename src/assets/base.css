@@ -12,7 +12,7 @@
   --navy: #0b1560;
   --blue: #293495;
 
-  --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow: 5px 8px 0px rgba(0, 0, 0, 0.1);
 
   --business-glow: 0px 0px 4px #3137b5;
   --personal-glow: 0px 0px 4px #b132b8;
@@ -32,6 +32,11 @@
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
   padding-top: 60px;
+}
+
+.button-direction {
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .modal-content {
@@ -69,6 +74,7 @@
   display: flex;
   justify-content: space-between;
   background-color: #80dbc4;
+  margin-bottom: 100px;
 }
 
 .logo {
@@ -117,7 +123,7 @@ button {
 }
 
 body {
-  background: var(--pastelblue);
+  background-color: #ffffff;
   color: var(--dark);
 }
 
@@ -185,6 +191,28 @@ h4 {
   color: var(--dark);
   font-size: 1.5rem;
   font-weight: 700;
+}
+
+button {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  padding: 5px;
+  cursor: pointer;
+  margin: 15px 0px;
+  background-color: #80dbc4;
+}
+
+.button-direction > button {
+  display: flex;
+  background-color: var(--danger);
+  padding: 8px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.create-todo {
+  margin: 0px;
 }
 
 .create-todo input[type="text"] {
@@ -364,4 +392,17 @@ input:checked ~ .bubble::after {
 .todo-item.done .todo-content input {
   text-decoration: line-through;
   color: var(--grey);
+}
+
+.not-found {
+  padding-top: 200px;
+}
+
+.not-found > * {
+  padding: 5px;
+}
+
+.not-found span > * {
+  color: var(--business);
+  text-decoration: underline;
 }

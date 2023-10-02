@@ -1,13 +1,9 @@
 <template>
-  <section class="navbar">
-    <div></div>
-  </section>
-
   <section class="create-todo">
     <h3>CREATE A TO DO LIST</h3>
 
     <!-- Open the modal when the button is clicked -->
-    <button @click="openModal">Open Modal</button>
+    <button @click="openModal">Create ToDo</button>
 
     <!-- Show the modal component when modalVisible is true -->
     <Modal v-if="modalVisible" @close="closeModal">
@@ -81,14 +77,21 @@
   <section class="todo-list">
     <h3>TODO LIST</h3>
     <div class="list" id="todo-list">
-      <div v-for="todo in todos_asc" :class="`todo-item ${todo.done && 'done'}`">
+      <div
+        v-for="todo in todos_asc"
+        :class="`todo-item ${todo.done && 'done'}`"
+      >
         <label>
           <input type="checkbox" v-model="todo.done" />
-          <span :class="`bubble ${todo.category == 'business' ? 'business' : 'personal'}`"></span>
+          <span
+            :class="`bubble ${
+              todo.category == 'business' ? 'business' : 'personal'
+            }`"
+          ></span>
         </label>
 
         <div class="todo-content">
-          <edit-todo :todo="todo" @save="updateTodo" />
+          <EditTodo :todo="todo" @save="updateTodo" />
         </div>
 
         <div class="actions">
@@ -162,20 +165,12 @@ const closeModal = () => {
   modalVisible.value = false;
 };
 
-const updateTodo = (todos, editedContent) => {
-  todos.content = editedContent;
-};
-</script>
+const updateTodo = (todo, editedContent) => {
+  const index = todos.value.findIndex((t) => t === todo);
 
-<!-- Register the Modal and EditTodo components -->
-<script>
-import Modal from "./Modal.vue";
-import EditTodo from "./EditTodo.vue";
-
-export default {
-  components: {
-    Modal,
-    EditTodo,
-  },
+  if (index !== -1) {
+    todos.value[index].content = editedContent;
+    localStorage.setItem("todos", JSON.stringify(todos.value));
+  }
 };
 </script>

@@ -1,7 +1,8 @@
 <script setup>
-import Modal from "../components/Modal.vue";
+import Navbar from "../components/Navbar.vue";
 </script>
 
 <template>
-  <Modal />
+  <Navbar />
+  <div>this is about us page</div>
 </template>

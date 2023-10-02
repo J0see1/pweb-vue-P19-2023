@@ -1,7 +1,9 @@
 <template>
   <div class="modal">
     <div class="modal-content">
-      <button @click="closeModal">Close</button>
+      <div class="button-direction">
+        <button @click="closeModal">Close</button>
+      </div>
       <slot></slot>
     </div>
   </div>
@@ -39,9 +41,6 @@ export default {
 
 /* Add any other styling you need for the modal */
 </style>
-
-
-
 
 <!-- <template>
   <div>
