@@ -1,10 +1,17 @@
 <template>
-  <div class="not-found">
-    <h1>404 - Page Not Found</h1>
-    <p>The page you're looking for doesn't exist.</p>
-    <p>
-      click here to go back <span> <RouterLink to="/">home</RouterLink></span>
-    </p>
+  <div class="bgnotfound">
+    <div class="row">
+        <div class="notfound">
+            <div class="title">Whoops!</div><br>
+              <h2>Page Not Found</h2>
+              <h4 class="wecant">We can't seem to find the page you're looking for</h4>
+              <h5>Error code: 404</h5>
+              <p>Click here to go back <span> <RouterLink to="/">home</RouterLink></span></p>
+        </div>
+        <div class="piccos">
+            <img src="../assets/404-page-not-found-illustration.png" alt="404notfound">
+        </div>
+    </div>
   </div>
 </template>
 

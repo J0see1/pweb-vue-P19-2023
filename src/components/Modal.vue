@@ -34,7 +34,7 @@ export default {
 }
 
 .modal-content {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   padding: 20px;
   border-radius: 5px;
 }
