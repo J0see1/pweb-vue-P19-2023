@@ -1,14 +1,15 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import NotFound from "../components/Error404.vue";
+import UserView from "../views/UserView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: "/",
-      name: "home",
-      component: HomeView,
+      name: "Home",
+      component: UserView,
     },
     {
       path: "/about",
@@ -18,6 +19,13 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import("../views/AboutView.vue"),
     },
+
+    {
+      path: "/user:id",
+      name: "Userhome",
+      component: HomeView,
+    },
+
     {
       path: "/:catchAll(.*)",
       name: "NotFound",

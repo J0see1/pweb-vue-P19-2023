@@ -72,7 +72,7 @@
 .navbar {
   margin: 0;
   display: flex;
-  position:sticky;
+  position: sticky;
   justify-content: space-between;
   background-color: #00326b;
   margin-bottom: 100px;
@@ -86,7 +86,7 @@
   color: whitesmoke;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-family: "Poppins";
-  font-style:italic;
+  font-style: italic;
   font-size: 40px;
   font-style: normal;
   font-weight: 800;
@@ -154,6 +154,18 @@ h4 {
 .topnav {
   background-color: #333;
   overflow: hidden;
+}
+
+.userList {
+  display: flex;
+  gap: 10px;
+  font-size: 16px;
+
+  text-decoration: underline;
+}
+
+.userList > * {
+  color: var(--primary);
 }
 
 .topnav a {
@@ -406,7 +418,7 @@ input:checked ~ .bubble::after {
   text-decoration: underline;
 }
 
-.bgnotfound{
+.bgnotfound {
   background-color: #00326b;
 }
 .row {
@@ -420,14 +432,14 @@ input:checked ~ .bubble::after {
   font-family: "Poppins";
   color: white;
 }
-.wecant{
-  color:white;
+.wecant {
+  color: white;
 }
 .title {
   font-size: 100px;
   font-weight: 500;
 }
 .piccos img {
-  width: 400px; 
-  height: auto; 
+  width: 400px;
+  height: auto;
 }

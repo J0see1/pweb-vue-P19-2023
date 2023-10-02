@@ -1,23 +1,20 @@
-<script setup>
-import { ref, onMounted, watch } from "vue";
-
-const name = ref("");
-
-watch(name, (newVal) => {
-  localStorage.setItem("name", newVal);
-});
-
-onMounted(() => {
-  name.value = localStorage.getItem("name") || "";
-});
+<script>
+export default {
+  computed: {
+    userId() {
+      return this.$route.params.userId;
+    },
+  },
+};
 </script>
 
 <template>
   <section class="greeting">
-    <h2 class="title">
-      What's up,
-      <input type="text" id="name" placeholder="Name here" v-model="name" />
-    </h2>
-    <h3>How's your week? Care to plan the next one?</h3>
+    <h2 class="title">What's up! Who are you now?</h2>
+    <div class="userList">
+      <router-link to="/user:1">alvin</router-link>
+      <router-link to="/user:2">jo</router-link>
+      <router-link to="/user:3">gaby</router-link>
+    </div>
   </section>
 </template>
