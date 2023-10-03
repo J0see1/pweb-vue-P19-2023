@@ -1,6 +1,12 @@
 # Praktikum-PemWeb-Modul-1
 
-This template should help get you started developing with Vue 3 in Vite.
+# Anggota
+
+| Nama                            | NRP          |
+| ------------------------------- | ------------ |
+| Marcelinus Alvinanda Chrisantya | `5027221012` |
+| Gabriella Erlinda Wijaya           | `5027221018` |
+| Jonathan Adithya Baswara                | `5027221062` |
 
 ## Recommended IDE Setup
 
